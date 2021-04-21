@@ -17,7 +17,6 @@ abstract class BaseActivity<T : ViewDataBinding, E : ViewModel> : AppCompatActiv
     super.onCreate(savedInstanceState)
 
     initDataBinding()
-    onWillAttachViewModel()
   }
 
   private fun initDataBinding() {
@@ -25,6 +24,4 @@ abstract class BaseActivity<T : ViewDataBinding, E : ViewModel> : AppCompatActiv
     dataBinding.lifecycleOwner = this
     dataBinding.setVariable(BR.viewModel, viewModel)
   }
-
-  open fun onWillAttachViewModel() {}
 }
