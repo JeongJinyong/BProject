@@ -27,6 +27,7 @@
   <string name="dialog_not_b">경보경보 A급 바이러스가 걸렸다\n즉시 앱을 나가주시길 바랍니다!!</string>
   <string name="dialog_reenter">다시입력</string>
   <string name="dialog_finish">종료하기</string>
+  <string name="str_start">START</string>
 
   <string-array name="main_text">
     <item><![CDATA[<font color=#ffffff>지옥의 회사에서 퇴근시간까지</font><br><font color=#e6003e>%s</font><font color=#ffffff> 남았어요.</font>]]></item>

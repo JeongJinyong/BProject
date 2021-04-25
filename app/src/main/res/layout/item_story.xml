@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+  <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      >
+
+    <ImageView
+        android:id="@+id/img_story"
+        android:layout_width="0dp"
+        android:layout_height="214dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guide_story_txt"
+        app:layout_constraintVertical_bias="1"
+        tools:srcCompat="@drawable/story_first"
+        />
+
+    <TextView
+        android:id="@+id/txt_story"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:fontFamily="@font/spoqa_han_sans"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guide_story_txt"
+        tools:text="월급쟁이로 살기\n참 힘들죠..?"
+        />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_story_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.279"
+        />
+  </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
