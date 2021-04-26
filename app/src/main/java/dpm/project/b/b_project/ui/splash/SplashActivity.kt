@@ -26,7 +26,7 @@ class SplashActivity : BaseActivity<ActivitySplashBinding, DummyViewModel>() {
     super.onCreate(savedInstanceState)
     Glide.with(this)
       .asGif()
-      .load(drawable.blife)
+      .load(drawable.blife_splash)
       .apply(RequestOptions.diskCacheStrategyOf(DiskCacheStrategy.RESOURCE))
       .listener(object : RequestListener<GifDrawable> {
         override fun onLoadFailed(
@@ -56,6 +56,7 @@ class SplashActivity : BaseActivity<ActivitySplashBinding, DummyViewModel>() {
               if (!resource.isRunning) {
                 startActivity(Intent(this@SplashActivity, StoryActivity::class.java))
                 finish()
+                break
               }
             }
           }.start()
