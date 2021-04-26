@@ -11,12 +11,12 @@ import com.bumptech.glide.load.resource.gif.GifDrawable
 import com.bumptech.glide.request.RequestListener
 import com.bumptech.glide.request.RequestOptions
 import com.bumptech.glide.request.target.Target
-import dpm.project.b.b_project.MainActivity
 import dpm.project.b.b_project.R
 import dpm.project.b.b_project.R.drawable
 import dpm.project.b.b_project.base.BaseActivity
 import dpm.project.b.b_project.databinding.ActivitySplashBinding
 import dpm.project.b.b_project.dummy.DummyViewModel
+import dpm.project.b.b_project.ui.story.StoryActivity
 
 class SplashActivity : BaseActivity<ActivitySplashBinding, DummyViewModel>() {
   override val layoutId: Int = R.layout.activity_splash
@@ -54,7 +54,8 @@ class SplashActivity : BaseActivity<ActivitySplashBinding, DummyViewModel>() {
                 e.printStackTrace()
               }
               if (!resource.isRunning) {
-                startActivity(Intent(this@SplashActivity, MainActivity::class.java))
+                startActivity(Intent(this@SplashActivity, StoryActivity::class.java))
+                finish()
               }
             }
           }.start()

@@ -10,6 +10,10 @@
       android:supportsRtl="true"
       android:theme="@style/Theme.BProject">
     <activity android:name=".MainActivity">
+
+    </activity>
+    <activity android:name=".ui.story.StoryActivity" />
+    <activity android:name=".ui.splash.SplashActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
 
