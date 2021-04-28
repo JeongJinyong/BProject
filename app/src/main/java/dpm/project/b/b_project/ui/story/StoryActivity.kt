@@ -2,6 +2,7 @@ package dpm.project.b.b_project.ui.story
 
 import android.os.Bundle
 import androidx.activity.viewModels
+import androidx.core.view.isInvisible
 import androidx.viewpager2.widget.ViewPager2.OnPageChangeCallback
 import dpm.project.b.b_project.R
 import dpm.project.b.b_project.base.BaseActivity
@@ -23,6 +24,7 @@ class StoryActivity : BaseActivity<ActivityStoryBinding, StoryViewModel>() {
     dataBinding.vpStory.registerOnPageChangeCallback(object : OnPageChangeCallback() {
       override fun onPageSelected(position: Int) {
         super.onPageSelected(position)
+        dataBinding.tvStart.isInvisible = position < 2
         dataBinding.progressStory.progress = position + 1
       }
     })
